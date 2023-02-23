@@ -1,4 +1,4 @@
-import "./Sidebar.scss";
+import "./SideBar.scss";
 import {
   Bell,
   BookmarkSimple,
