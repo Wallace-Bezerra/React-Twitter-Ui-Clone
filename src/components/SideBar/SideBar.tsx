@@ -1,3 +1,4 @@
+import "./Sidebar.scss";
 import {
   Bell,
   BookmarkSimple,
@@ -10,7 +11,6 @@ import {
   User,
 } from "phosphor-react";
 import { NavLink } from "react-router-dom";
-import "./Sidebar.scss";
 
 export const SideBar = () => {
   return (
