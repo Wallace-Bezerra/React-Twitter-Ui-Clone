@@ -1,4 +1,3 @@
-import { SideBar } from "./components/SideBar/SideBar";
 // import { BrowserRouter, Router, Route } from "react-router-dom";
 import { Routes } from "./routes";
 

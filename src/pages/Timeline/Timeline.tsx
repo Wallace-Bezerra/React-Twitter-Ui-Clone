@@ -3,19 +3,42 @@ import { Tweets } from "../../App";
 import { Separator } from "../../components/Separator/Separator";
 import { TimelineHeader } from "../../components/TimelineHeader/TimelineHeader";
 import { Tweet } from "../../components/Tweet/Tweet";
+import { FormEvent, useState } from "react";
 
 export const Timeline = () => {
+  const [tweets, setTweets] = useState(Tweets);
+  const [tweetForm, setTweetForm] = useState("");
+
+  const handleSubimit = (event: FormEvent) => {
+    event.preventDefault();
+    const newTweet = [
+      {
+        id: Math.floor(Math.random()).toString(),
+        content: tweetForm,
+      },
+      ...tweets,
+    ];
+    setTweets(newTweet);
+    setTweetForm("");
+  };
+  console.log(tweetForm);
+
   return (
     <main className="timeline">
       <TimelineHeader title="Home" />
 
-      <form className="new-timeline-form">
+      <form onSubmit={handleSubimit} className="new-timeline-form">
         <label htmlFor="tweet">
           <img
             src="https://github.com/wallace-bezerra.png"
             alt="Perfil imagem"
           />
           <textarea
+            onChange={(e) => {
+              setTweetForm(e.target.value);
+            }}
+            value={tweetForm}
+            required
             id="tweet"
             placeholder="O que você está pensando?"
           ></textarea>
@@ -27,7 +50,7 @@ export const Timeline = () => {
 
       <Separator />
 
-      {Tweets.map((tweet) => {
+      {tweets.map((tweet) => {
         return <Tweet content={tweet.content} key={tweet.id} />;
       })}
     </main>

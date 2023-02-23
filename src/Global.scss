@@ -52,6 +52,9 @@ a {
   display: grid;
   grid-template-columns: 300px 1fr;
   max-width: 1000px;
+  @media (max-width: 780px) {
+    grid-template-columns: 80px 1fr;
+  }
 }
 
 .content {

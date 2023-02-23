@@ -33,10 +33,19 @@
     }
   }
   .answer-tweet {
-    // align-self: flex-end;
     width: 93px;
     height: 40px;
     font-weight: 800;
     font-size: 16px;
+  }
+  @media (max-width: 720px) {
+    label {
+      textarea {
+        font-size: 15px;
+        &::placeholder {
+          font-size: 16px;
+        }
+      }
+    }
   }
 }

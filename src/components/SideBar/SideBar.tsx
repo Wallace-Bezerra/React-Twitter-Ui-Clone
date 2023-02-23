@@ -6,6 +6,7 @@ import {
   FileText,
   Hash,
   House,
+  Pencil,
   User,
 } from "phosphor-react";
 import { NavLink } from "react-router-dom";
@@ -18,38 +19,41 @@ export const SideBar = () => {
       <nav className="menu-navigation">
         <NavLink className="item-list" to={"/"}>
           <House size={32} weight="fill" />
-          Home
+          <span>Home</span>
         </NavLink>
         <NavLink className="item-list" to={"/tweet"}>
           <Hash size={32} />
-          Explorar
+          <span>Explorar</span>
         </NavLink>
         <a className="item-list">
           <Bell size={32} />
-          Notificação
+          <span>Notificação</span>
         </a>
         <a className="item-list">
           <Envelope size={32} />
-          Mensagens
+          <span>Mensagens</span>
         </a>
         <a className="item-list">
           <BookmarkSimple size={32} />
-          Itens salvos
+          <span>Itens salvos</span>
         </a>
         <a className="item-list">
           <FileText size={32} />
-          Listas
+          <span>Listas</span>
         </a>
         <a className="item-list">
           <User size={32} />
-          Perfil
+          <span>Perfil</span>
         </a>
         <a className="item-list">
           <DotsThreeCircle size={32} />
-          Mais
+          <span>Mais</span>
         </a>
       </nav>
-      <button className="new-tweet">Tweet</button>
+      <button className="new-tweet">
+        <Pencil size={32} />
+        <span>Tweet</span>
+      </button>
     </aside>
   );
 };

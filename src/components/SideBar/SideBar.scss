@@ -26,4 +26,28 @@
       gap: 20px;
     }
   }
+  .new-tweet {
+    svg {
+      display: none;
+    }
+  }
+  @media (max-width: 780px) {
+    align-items: center;
+    .menu-navigation {
+      .item-list {
+        span {
+          display: none;
+        }
+      }
+    }
+    .new-tweet {
+      padding: 1rem 1rem;
+      span {
+        display: none;
+      }
+      svg {
+        display: block;
+      }
+    }
+  }
 }
