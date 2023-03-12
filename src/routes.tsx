@@ -4,14 +4,6 @@ import { Timeline } from "./pages/Timeline/Timeline";
 import { Tweets } from "./pages/Tweets/Tweets";
 
 export const Router = createBrowserRouter([
-  // {
-  //   path: "/",
-  //   element: <Timeline />,
-  // },
-  // {
-  //   path: "/tweet",
-  //   element: <Tweets />,
-  // },
   {
     path: "/",
     element: <Default />,

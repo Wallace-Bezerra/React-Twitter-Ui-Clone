@@ -21,12 +21,9 @@ export const Timeline = () => {
     setTweets(newTweet);
     setTweetForm("");
   };
-  console.log(tweetForm);
-
   return (
     <main className="timeline">
       <TimelineHeader title="Home" />
-
       <form onSubmit={handleSubimit} className="new-timeline-form">
         <label htmlFor="tweet">
           <img
@@ -47,9 +44,7 @@ export const Timeline = () => {
           Tweet
         </button>
       </form>
-
       <Separator />
-
       {tweets.map((tweet) => {
         return <Tweet content={tweet.content} key={tweet.id} />;
       })}
